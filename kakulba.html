@@ -1,0 +1,152 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For Jessa</title>  <!-- Google Font -->  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #7f5cff, #d8b4fe);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(245,240,255,0.95));
+      max-width: 420px;
+      width: 100%;
+      max-height: 85vh;
+      overflow-y: auto;
+      border-radius: 22px;
+      padding: 36px 28px;
+      text-align: center;
+      box-shadow: 0 30px 60px rgba(109, 40, 217, 0.35), inset 0 0 0 1px rgba(124, 58, 237, 0.08);
+      animation: fadeIn 1.2s ease;
+    }
+
+    h1 {
+      font-size: 2.1rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: #6d28d9;
+      margin-bottom: 14px;
+    }
+
+    p {
+      font-size: 0.95rem;
+      font-weight: 400;
+      color: #4b5563;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .heart {
+      font-size: 2.5rem;
+      margin: 12px 0 24px;
+      color: #7c3aed;
+      animation: pulse 1.5s infinite;
+      display: inline-block;
+      filter: drop-shadow(0 6px 10px rgba(124,58,237,0.4));
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.25); }
+      100% { transform: scale(1); }
+    }
+
+    button {
+      width: 100%;
+      padding: 14px 24px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      border-radius: 999px;
+      border: none;
+      background: linear-gradient(135deg, #7c3aed, #a855f7);
+      color: #fff;
+      box-shadow: 0 14px 30px rgba(124, 58, 237, 0.45);
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 20px 40px rgba(124, 58, 237, 0.55);
+    }
+
+    .hidden-message {
+      display: none;
+      margin-top: 20px;
+      font-size: 1.05rem;
+      color: #4b5563;
+    }
+
+    .signature {
+      margin-top: 25px;
+      font-size: 0.9rem;
+      color: #6b7280;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style></head>
+<body>
+  <div class="card">
+    <div id="intro">
+      <h1>Hello, Jessa</h1>
+      <div class="heart">🟣</div>
+      <p>Click below to see a special message!</p>
+      <button onclick="revealMessage()">Click Me!</button>
+    </div><div class="hidden-message" id="confession">
+  <p>
+    Hello Jessa, HAPPY BIRTHDAY and MERRY CHRISTMAS TO YOU!! Kabalo ko nga pinakalit ni but I just want you to know na I like you! I liked you since g9 HAHAHAHA yes I liked you for a long time na, dugay na no? So story time sa ta HAHAHAHAHA Katong g9 man gud kay super gwapa jud kaayo ka promise di nako maiwasan na maka gusto saimo but introbird paman gud ko dati gud sometimes ra ko maka talk saimo HAHAHAHAHA di kaayo ko makapapansin saimo  HAHAHAHAH then sa gr10 nag stop kay dili na biya ta cm ato na time no so dili tika makita like sometimes nalang kung mag laag ko didto sa inyong room para makig dula ila Glenn HAHAHAHAH like ning gawas rajud ang akong feelings nimo tong sa jingle HAHAHAHAHAH sige man gud kog dool ato saimo gud awa na fall HAHAHAHAH and wala jud ko nag expect na mobalik ang feelings nako sa imo ato nga time kay abi nakog nagwapahan rako nimo pero na fall na diay to HAHAHAHAHAH bitaw naa koy nakita saimo nga wala nako nakita sa uban and lingaw jud kaayo ka kauban and ka chat like fr ngayo pa gani kog tips sa uban unsaon pag first move para lang ma chatan tika kay di jud biya ko kabalo ug mga ingon ana unya astang tugnawa pud nako pag abot sa mga ingon ana HHAHAHAHAH pero nagkadugay nag ka awkward HOOO naa gani time nga ginaiwasan jud tika personal ug sa chat Idk nganong nabuhat nako to pero I regretted that action kay naka hunahuna ka nga nakasala ka saako pero wala gud ka oahan rato nako HAHAHAHAHAHA mao to naulaw najud kog approach saimo ato nga time HAHAHAHAHAH but I gained a lot of courage jud para maka talk tika ug balik HAHAHAAH mao to I learned a lot jud just to talk to you and im not expecting any reciprocation kay I know nga naa pud kay crush HAHAHAHAHAHAHA kato lang.
+  </p>
+  <p>
+And I hope na this message won't lead us to awkwardness tas unta same ra gihapon atong bond kung unsa man ta before nako ni gi send na message sa imo HAAHAHAHAHAHA and again I'm not asking for any reciprocation ginapagawas lang jud nako ang akong feeling HAHAHAHAHA
+  </p>
+  <p>
+    Please enjoy Christmas especially your birthday.
+  </p>
+  <div class="signature">— zane</div>
+</div>
+
+<p id="lockedMessage" style="display:none; color:#888; margin-top:20px; font-size:0.95rem;">
+  🎄December 25 na oy HAHAHAHAHAHAHA
+</p>
+
+  </div>  <script>
+    function revealMessage() {
+      const today = new Date();
+      const month = today.getMonth();
+      const date = today.getDate();
+
+      const intro = document.getElementById('intro');
+      const confession = document.getElementById('confession');
+      const lockedMessage = document.getElementById('lockedMessage');
+
+      if (intro) intro.style.display = 'none';
+
+      if (month === 11 && date === 24) {
+        if (confession) confession.style.display = 'block';
+        if (lockedMessage) lockedMessage.style.display = 'none';
+      } else {
+        if (confession) confession.style.display = 'none';
+        if (lockedMessage) lockedMessage.style.display = 'block';
+      }
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script></body>
+</html>
